@@ -8,7 +8,7 @@ xhr.send();
 xhr.onreadystatechange = function () {
   if (xhr.readyState === 4 && xhr.status === 200) {
     let product = JSON.parse(xhr.responseText);
-    console.log(product);
+    console.log(`product:: `, product);
     result.innerHTML = `
       <p>상품명 : ${product.data.name}</p>
       <p>생산년도 : ${product.data.year}</p>
